@@ -1,35 +1,32 @@
 # Отчет по лабораторной AWS
 
 ### Введение 
-Сначала я создал репозиторий git-practice на GitHub и скопировал его URL-адрес
-Далее с помощью терминала и команд `git clone` и `cd` я перешёл в папку для локального сохранения репозитория. Потом я создал новый текстовый файл example.txt, а дальше добавил в него некоторый текст и запушил на GitHub в основуную ветку main, используя команды `git add, git commit -m и git push origin main`. 
+Мы брали информацию об `AWS` на официальном сайте: `https://aws.amazon.com`
+Вот сервисы, которые были использованы в рамках лабораторной работы:
+
+### AmazonElastiCache - Compute
+- сервис повышает производительность веб-приложений, извлекая информацию из управляемых кешей в памяти, вместо использования дисковых баз данных.
+Использование сервиса в лабораторной: `Tax` 
 
 ![Screenshot of a 1 photgr.](https://github.com/cs-itmo-2023/lab-5-EgorNick/blob/main/Report/1.jpg)
 
-Затем создал новую ветку feature branch с помощью команды `git branch`, переключился на нее с помощью `git checkout`. После я отредактировал файл example.txt, повторил некоторые шаги из пункта 3,
-![Screenshot of a 1 photgr.](https://github.com/cs-itmo-2023/lab-5-EgorNick/blob/main/Report/19.jpg)
+### AmazonES - Search & Analytics
+- используется для поиска и хранения логов и их анализа данных.
 
-Потом переключился обратно в основную ветку main помощью `git checkout main` и слил изменения из feature branch в основную ветку, а затем сохранил структуру файла, используя `git merge feature branch и git push origin main`.
+### AmazonCloudfront - Content Delivery
+- это сеть доставки контента, которая была создана для его кэширования ближе к потребителям, чтобы повысить скорость доступа к нему.
+  В`Data Transfer` у нас идёт оплата за передачу данных через этот сервис.
 
-![Screenshot of 2 photgr.](https://github.com/cs-itmo-2023/lab-5-EgorNick/blob/main/Report/2.jpg)
-
-### Работа с ветками: 
-Я создал новый текстовый файл с базовой структурой книги book.txt. С помощью git checkout -b создал новую ветку feature-login.
-
-Далее я внёс изменения в файл, закоммитил их и отправил ветку на GitHub, используя `git add, git commit -m, git push origin`.
-
-![Screenshot of 3 photgr.](https://github.com/cs-itmo-2023/lab-5-EgorNick/blob/main/Report/3.jpg)
-![Screenshot of 4 photgr.](https://github.com/cs-itmo-2023/lab-5-EgorNick/blob/main/Report/4.jpg)
-
-### Работа с удаленным репозиторем: 
-Я переключился на основную ветку main, внёс изменения в файл и закоммитил изменения и отправил их на GitHub с помощью `git add, git commit -m, git push origin`. 
-
-![Screenshot of 5 photgr.](https://github.com/cs-itmo-2023/lab-5-EgorNick/blob/main/Report/5.jpg)
+### AmazonQLDB - Database
+- используется для ведения неизменяемых данных kjgkjgjhfhgfgh
+  Мы используем этот сервис для хранения данных и ввода-вывода.
   
-### Моделирование конфликта: 
-Я вернулся в ветку feature-login, изменил главу 2 в файле, закоммитил изменения и отправил их на GitHub, используя `git checkout, git add, git commit -m, git push origin feature login`.
+### AWSKMS, AWSCloudHSM - Security:
+AWSKMS - обеспечивает безопасность ключей для защиты данных в сервисах и приложениях AWS.
+Нам потребуется использовать в таблице `KMS API Requests` (API запросы на использование KMS) и `KMS Keys Usage` (для ключей шифрования).
 
-![Screenshot of 5 photgr.](https://github.com/cs-itmo-2023/lab-5-EgorNick/blob/main/Report/6.jpg)
+AWSCloudHSM - используется для более сложных требований. С помощью AWS CloudHSM можно выполнять различные криптографические задачи и т.д. Поэтому используем в таблице `HSM Operations`. 
+
 
 ### Разрешение Нашего конфликта:
 Я вернулся в основную ветку main и попробовал слить изменения с помощью `git checkout main и git merge feature-login`. Возник у меня конфликт.   
